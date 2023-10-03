@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package countryproto;
+
+service CountryService {
+  rpc createCountry (createCountryRequest) returns (createCountryResponse);
+}
+
+message createCountryRequest {
+  string name = 1;
+  string iso_code = 2;
+  string is_active = 3;
+}
+
+message createCountryResponse {
+   string message = 1;
+}
